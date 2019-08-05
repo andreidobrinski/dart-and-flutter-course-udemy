@@ -3,6 +3,8 @@
 void main() {
   var name = myName();
   
+  // $name is good for string interpolation without computing
+  // use ${name.length} to compute values
   print('My name is $name');
 }
 
