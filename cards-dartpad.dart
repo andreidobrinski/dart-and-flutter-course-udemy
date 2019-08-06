@@ -1,5 +1,6 @@
 void main() {
-  new Deck();
+  var deck = new Deck();
+  print(deck);
 }
 
 class Deck {
@@ -16,6 +17,10 @@ class Deck {
       }
     }
   }
+  
+  toString() {
+    return cards.toString();
+  }
 }
 
 class Card {
@@ -23,4 +28,8 @@ class Card {
   String rank;
   
   Card(this.rank, this.suit);
+  
+  toString() {
+    return '$rank of $suit';
+  }
 }
