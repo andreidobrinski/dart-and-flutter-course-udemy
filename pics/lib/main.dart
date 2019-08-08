@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
-// define a 'main' function to run when app starts
-
-// create a text widget to show text on the screen
+void main() {
+  var app = MaterialApp(
+    home: Text('Hello'),
+  );
 
 // take the widget and get it on the screen
+}
