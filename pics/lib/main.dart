@@ -10,6 +10,7 @@ void main() {
         onPressed: () {
           print('hello');
         },
+        child: Icon(Icons.add),
       ),
     ),
   );
