@@ -5,5 +5,5 @@ void main() {
     home: Text('Hello'),
   );
 
-// take the widget and get it on the screen
+  runApp(app);
 }
