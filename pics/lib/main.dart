@@ -6,6 +6,11 @@ void main() {
       appBar: AppBar(
         title: Text('Images'),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          print('hello');
+        },
+      ),
     ),
   );
 
