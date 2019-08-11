@@ -10,7 +10,28 @@ class LoginScreenState extends State<LoginScreen> {
   Widget build(context) {
     return Container(
       margin: EdgeInsets.all(20.0),
-      child: Text('LoginScreen'),
+      child: Form(
+        child: Column(
+          children: <Widget>[
+            emailField(),
+            // passwordField(),
+            // submitButton(),
+          ],
+        ),
+      ),
     );
   }
+
+  Widget emailField() {
+    return TextFormField(
+      decoration: InputDecoration(
+        labelText: 'Email Address',
+        hintText: 'test@test.com',
+      ),
+    );
+  }
+
+  Widget passwordField() {}
+
+  Widget submitButton() {}
 }
