@@ -1,6 +1,9 @@
 import 'dart:async';
+import 'validators.dart';
 
-class Bloc {
+// mixin "with" needs "extends" to work
+// also works with Bloc extends Validators
+class Bloc extends Object with Validators {
   final _email = StreamController<String>();
   final _password = StreamController<String>();
 
