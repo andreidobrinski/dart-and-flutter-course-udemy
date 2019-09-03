@@ -5,8 +5,8 @@ import 'package:rxdart/rxdart.dart';
 // mixin "with" needs "extends" to work
 // also works with Bloc extends Validators
 class Bloc extends Object with Validators {
-  final _email = StreamController<String>();
-  final _password = StreamController<String>();
+  final _email = StreamController<String>.broadcast();
+  final _password = StreamController<String>.broadcast();
 
   // Add data to stream
   Stream<String> get email => _email.stream.transform(validateEmail);
