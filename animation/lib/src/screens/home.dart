@@ -137,7 +137,7 @@ class HomeState extends State<Home> with TickerProviderStateMixin {
           return Transform.rotate(
             child: child,
             alignment: Alignment.topRight,
-            angle: boxAnimation.value,
+            angle: -boxAnimation.value,
           );
         },
       ),
