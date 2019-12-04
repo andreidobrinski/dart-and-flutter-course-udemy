@@ -9,21 +9,27 @@ void main() {
 }
 
 class PowerGrid {
-  List<NuclearPlant> connectedPlants = [];
+  List<PowerPlant> connectedPlants = [];
 
-  addPlant(NuclearPlant plant) {
+  addPlant(PowerPlant plant) {
     plant.turnOn();
     connectedPlants.add(plant);
   }
 }
 
-class NuclearPlant {
+// abstract class defines a new type in our app
+abstract class PowerPlant {
+  // if the class has the turnOn method, it's valid
+  turnOn();
+}
+
+class NuclearPlant implements PowerPlant {
   turnOn() {
     print('On - Nuclear');
   }
 }
 
-class SolarPlant {
+class SolarPlant implements PowerPlant {
   turnOn() {
     print('On - Solar');
   }
