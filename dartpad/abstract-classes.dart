@@ -17,6 +17,10 @@ class PowerGrid {
   }
 }
 
+abstract class ABuilding {
+  int height;
+}
+
 // abstract class defines a new type in our app
 abstract class PowerPlant {
   int costOfEnergy;
@@ -35,8 +39,9 @@ class NuclearPlant implements PowerPlant {
   }
 }
 
-class SolarPlant implements PowerPlant {
+class SolarPlant implements PowerPlant, ABuilding {
   int costOfEnergy;
+  int height;
 
   bool turnOn(String duration) {
     print('On - Solar');
