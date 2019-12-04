@@ -12,25 +12,34 @@ class PowerGrid {
   List<PowerPlant> connectedPlants = [];
 
   addPlant(PowerPlant plant) {
-    plant.turnOn();
+    bool confirmation = plant.turnOn('5 hours');
     connectedPlants.add(plant);
   }
 }
 
 // abstract class defines a new type in our app
 abstract class PowerPlant {
+  int costOfEnergy;
+
   // if the class has the turnOn method, it's valid
-  turnOn();
+  bool turnOn(String duration);
 }
 
 class NuclearPlant implements PowerPlant {
-  turnOn() {
+  int costOfEnergy;
+
+  // arg name can be anything
+  bool turnOn(String duration) {
     print('On - Nuclear');
+    return true;
   }
 }
 
 class SolarPlant implements PowerPlant {
-  turnOn() {
+  int costOfEnergy;
+
+  bool turnOn(String duration) {
     print('On - Solar');
+    return false;
   }
 }
