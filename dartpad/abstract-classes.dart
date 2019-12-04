@@ -1,3 +1,13 @@
+void main() {
+  PowerGrid grid = new PowerGrid();
+
+  NuclearPlant nuclear = new NuclearPlant();
+  SolarPlant solar = new SolarPlant();
+
+  grid.addPlant(nuclear);
+  grid.addPlant(solar);
+}
+
 class PowerGrid {
   List<NuclearPlant> connectedPlants = [];
 
@@ -9,6 +19,12 @@ class PowerGrid {
 
 class NuclearPlant {
   turnOn() {
-    print('On');
+    print('On - Nuclear');
+  }
+}
+
+class SolarPlant {
+  turnOn() {
+    print('On - Solar');
   }
 }
