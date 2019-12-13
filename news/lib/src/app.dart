@@ -26,7 +26,10 @@ class App extends StatelessWidget {
     } else {
       return MaterialPageRoute(
         builder: (context) {
+          final commentsBloc = CommentsProvider.of(context);
           final itemId = int.parse(settings.name.replaceFirst('/', ''));
+
+          commentsBloc.fetchItemWithComments(itemId);
 
           return NewsDetail(
             itemId: itemId,
