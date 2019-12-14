@@ -53,6 +53,7 @@ class NewsDetail extends StatelessWidget {
       return Comment(
         itemId: kidId,
         itemMap: itemMap,
+        depth: 0,
       );
     }).toList();
 
